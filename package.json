@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-prod": "env-cmd -f ./config/.env node src/index.js",
+    "start": "NODE_ENV=production npm run start-prod",
+    "start-win": "set NODE_ENV='production' && npm run start-prod",
+    "server": "env-cmd -f ./config/.env nodemon src/index.js",
+    "client": "npm start --prefix client",
+    "dev": "NODE_ENV=dev concurrently \"npm run server\" \"npm run client\"",
+    "dev-win": "set NODE_ENV='dev' && concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && npm run build-prod",
+    "build-win": "cd client && npm install && npm run build-prod-win"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbiliAze/MERN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IbiliAze/MERN/issues"
+  },
+  "homepage": "https://github.com/IbiliAze/MERN#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "concurrently": "^6.5.1",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.2",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "react-redux": "^7.2.6",
+    "react-scripts": "^5.0.0",
+    "redux-thunk": "^2.4.1"
+  }
+}
