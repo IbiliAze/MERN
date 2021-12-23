@@ -45,7 +45,7 @@ function HomePage({ things, postThing, deleteThing }) {
   // JSX
   return (
     <>
-      <h2>Remote Machine Access</h2>
+      <h2>MERN App</h2>
       <hr />
 
       <Button color='primary' onClick={toggleModal}>
