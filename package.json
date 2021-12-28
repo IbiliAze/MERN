@@ -11,7 +11,7 @@
     "client": "npm start --prefix client",
     "dev": "NODE_ENV=dev concurrently \"npm run server\" \"npm run client\"",
     "dev-win": "set NODE_ENV='dev' && concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm install && npm run build-prod",
+    "build": "cd client && npm install && npm run build",
     "build-win": "cd client && npm install && npm run build-prod-win"
   },
   "repository": {
